@@ -1,0 +1,7 @@
+@use "../abstracts/" as *;
+
+body {
+    font-size: 1.6rem;
+    font-family: "Ubuntu", sans-serif;
+    color: $color-black;
+}

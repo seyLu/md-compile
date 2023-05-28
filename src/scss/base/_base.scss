@@ -1,0 +1,15 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;             // defines what 1rem is (62.5% of 16px = 10px)
+}
+
+body {
+    box-sizing: border-box        // makes elem dimensions include padding and border
+}

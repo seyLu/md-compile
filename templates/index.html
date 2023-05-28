@@ -2,29 +2,39 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>seyLu</title>
-    <link rel="stylesheet" href="static/css/github-markdown-light.css" />
-    <style>
-        .markdown-body {
-            box-sizing: border-box;
-            min-width: 200px;
-            max-width: 980px;
-            margin: 0 auto;
-            padding: 45px;
-        }
-
-        @media (max-width: 767px) {
-            .markdown-body {
-                padding: 15px;
-            }
-        }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/github-markdown-light.min.css">
+    <link rel="stylesheet" href="static/css/main.min.css">
 </head>
 
 <body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav__logo">
+                md-compile
+            </div>
+            <div class="nav__links">
+                <ol>
+                    <li class="theme-toggler">theme toggler</li>
+                    <li class="projects-dropdown">projects</li>
+                    <li class="github-icon">github icon</li>
+                </ol>
+            </div>
+        </nav>
+    </header>
+
     <main class="markdown-body">{{ md | safe }}</main>
+
+    <footer class="footer">
+        <div class="footer__text">
+            footer
+        </div>
+    </footer>
 </body>
 
 </html>
