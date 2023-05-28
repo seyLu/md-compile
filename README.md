@@ -2,7 +2,7 @@
 Compile multiple markdowns into one README
 
 ### Requirements
-`python>=3.11`
+`python>=3.11.3`
 
 `node>=18.15.0`
 
