@@ -5,22 +5,20 @@
   "main": "index.js",
   "scripts": {
     "prebuild": "rimraf static && make-dir static",
-    "build": "concurrently \"npm run minify:css && npm run rename:css\" \"npm run minify:scss\"",
+    "build": "concurrently \"npm run minify:css\" \"npm run minify:scss\"",
     "watch": "concurrently \"npm run watch:md\" \"npm run watch:scss\"",
     "watch:md": "nodemon --ext md --watch markdown/sections --exec \"bash scripts/readmee\"",
     "watch:scss": "sass --watch --style=compressed src/scss:static/css",
-    "minify:css": "cleancss -b -o static/css -O2 src/css/*.css",
-    "minify:scss": "sass --style=compressed src/scss:static/css",
-    "rename:css": "move-cli static/css/github-markdown-light-min.css static/css/github-markdown-light.min.css && move-cli static/css/github-markdown-dark-min.css static/css/github-markdown-dark.min.css"
+    "minify:css": "cleancss -b --batch-suffix '.min' -o static/css -O2 src/css/*.css",
+    "minify:scss": "sass --style=compressed src/scss:static/css"
   },
   "keywords": [],
-  "author": "seyLu <seyluofficial@gmail.com> (https://github.com/seyLu)",
+  "author": "seyLu (https://github.com/seyLu)",
   "license": "MIT",
   "devDependencies": {
     "clean-css-cli": "^5.6.2",
     "concurrently": "^8.0.1",
     "make-dir-cli": "^3.0.0",
-    "move-cli": "^2.0.0",
     "nodemon": "^2.0.22",
     "rimraf": "^5.0.1",
     "sass": "^1.62.1"
