@@ -7,7 +7,7 @@
     "prebuild": "rimraf static && make-dir static",
     "build": "concurrently \"npm run minify:css\" \"npm run minify:scss\"",
     "watch": "concurrently \"npm run watch:md\" \"npm run watch:scss\"",
-    "watch:md": "nodemon --ext md --watch markdown/sections --exec \"bash scripts/readmee\"",
+    "watch:md": "nodemon --ext md --watch markdown/sections --exec \"python3.11 scripts/readme.py\"",
     "watch:scss": "sass --watch --style=compressed src/scss:static/css",
     "minify:css": "cleancss -b --batch-suffix '.min' -o static/css -O2 src/css/*.css",
     "minify:scss": "sass --style=compressed src/scss:static/css"
