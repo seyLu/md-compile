@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/static/css/github-markdown-light.min.css">
+    <link id="github-markdown-css" rel="stylesheet" href="/static/css/github-markdown-light.min.css">
     <link rel="stylesheet" href="/static/css/main.min.css">
     <script type="text/javascript" src="/static/js/main.js" defer></script>
 </head>
@@ -21,8 +21,10 @@
             </div>
             <div class="nav__links">
                 <ol>
-                    <input type="checkbox" name="theme-toggler" id="theme-toggler">
-                    <li class="theme-toggler">theme toggler</li>
+                    <li class="theme-toggler">
+                        <input type="checkbox" name="theme-toggler" id="theme-toggler">
+                        <label for="theme-toggler" class="theme-toggler-label">theme toggler</label>
+                    </li>
                     <li class="projects-dropdown">projects</li>
                     <li class="github-icon">github icon</li>
                 </ol>

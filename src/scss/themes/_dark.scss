@@ -1,0 +1,9 @@
+body[data-theme="dark"] {
+    .header{
+        color: #fff;
+
+        &::before {
+            box-shadow: inset 0 0 0 200rem rgba(0, 0, 0, 0.5);
+        }
+    }
+}
