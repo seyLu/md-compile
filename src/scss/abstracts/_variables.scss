@@ -1,10 +1,13 @@
-// COLOR
-// $color-primary: #55c57a;
-// $color-primary-light: #7ed56f;
-// $color-primary-dark: #28b485;
-
 $color-black: rgb(36, 41, 47);
-$background-color-github-black: rgb(13, 17, 23);
+
+$background-color-github-dark: rgb(13, 17, 23);
+
+$background-color-nav-light: rgb(255, 245, 245);
+$background-color-nav-dark: rgb(10, 10, 10);
+
+$background-color-theme-toggler-light: rgba($background-color-nav-light, 0.1);
+$background-color-theme-toggler-dark: rgba($background-color-nav-dark, 0.1);
+$background-color-theme-toggler-circle-dark: rgb(146, 146, 161);
 
 // FONT
 $default-font-size: 1.6rem;

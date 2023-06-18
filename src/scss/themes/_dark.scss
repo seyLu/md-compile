@@ -1,14 +1,24 @@
 @use "../abstracts/" as *;
 
 body[data-theme="dark"] {
-    background-color: $background-color-github-black;
+    background-color: $background-color-github-dark;
 
     .header{
         color: #fff;
         background-color: transparent;
 
         &::before {
-            box-shadow: inset 0 0 0 200rem rgba(10, 10, 10, 0.5);
+            box-shadow: inset 0 0 0 200rem rgba($background-color-nav-dark, 0.5);
+        }
+    }
+
+    .theme-toggler {
+        &__label {
+            background-color: $background-color-theme-toggler-light;
+
+            &__circle {
+
+            }
         }
     }
 }

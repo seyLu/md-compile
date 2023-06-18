@@ -1,0 +1,21 @@
+@use "../abstracts/" as *;
+
+.material-symbols-outlined {
+    &__light_mode {
+
+    }
+
+    &__dark_mode {
+
+    }
+
+    &__light_mode,
+    &__dark_mode {
+        font-size: 2rem;
+        font-variation-settings:
+        'FILL' 1,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48;
+    }
+}

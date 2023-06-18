@@ -1,1 +1,36 @@
+@use "../abstracts/" as *;
 
+.theme-toggler {
+    &__checkbox {
+        opacity: 0;
+        position: absolute;
+    }
+
+    &__checkbox:checked + &__label > &__label--circle {
+        transform: translateX(24px);
+    }
+
+    &__label {
+        background-color: $background-color-theme-toggler-dark;
+        width: 5rem;
+        height: 2.6rem;
+        border-radius: 5rem;
+        position: relative;
+        padding: 0.5rem;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &--circle {
+            background-color: $background-color-theme-toggler-circle-dark;
+            width: 2.2rem;
+            height: 2.2rem;
+            position: absolute;
+            left: 0.2rem;
+            top: 0.2rem;
+            border-radius: 50%;
+            transition: transform 0.2s linear;
+        }
+    }
+}

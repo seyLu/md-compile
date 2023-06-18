@@ -5,10 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>seyLu</title>
+
+    <!-- Google Fonts: Ubuntu -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <!-- Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <!-- Github Markdown CSS -->
     <link id="github-markdown-css" rel="stylesheet" href="/static/css/github-markdown-light.min.css">
+
+    <!-- Custom Styles/Scripts -->
     <link rel="stylesheet" href="/static/css/main.min.css">
     <script type="text/javascript" src="/static/js/main.js" defer></script>
 </head>
@@ -21,9 +31,17 @@
             </div>
             <div class="nav__links">
                 <ol>
-                    <li class="theme-toggler">
-                        <input type="checkbox" name="theme-toggler" id="theme-toggler">
-                        <label for="theme-toggler" class="theme-toggler-label">theme toggler</label>
+                    <li class="theme-toggler u-no-select">
+                        <input type="checkbox" name="theme-toggler" id="theme-toggler" class="theme-toggler__checkbox">
+                        <label for="theme-toggler" class="theme-toggler__label">
+                            <span class="material-symbols-outlined material-symbols-outlined__light_mode">
+                                light_mode
+                            </span>
+                            <span class="material-symbols-outlined material-symbols-outlined__dark_mode">
+                                dark_mode
+                            </span>
+                            <span class="theme-toggler__label--circle"></span>
+                        </label>
                     </li>
                     <li class="projects-dropdown">projects</li>
                     <li class="github-icon">github icon</li>
