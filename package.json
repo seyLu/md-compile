@@ -4,13 +4,15 @@
   "description": "MJ Sabit (seyLu)",
   "main": "index.js",
   "scripts": {
-    "prebuild": "rimraf static && make-dir static",
-    "build": "concurrently \"npm run minify:css\" \"npm run minify:scss\"",
-    "watch": "concurrently \"npm run watch:md\" \"npm run watch:scss\"",
+    "prebuild": "rimraf static && make-dir static/js",
+    "build": "concurrently \"npm run minify:css\" \"npm run minify:scss\" \"npm run build:js\"",
+    "watch": "concurrently \"npm run watch:md\" \"npm run watch:scss\" \"npm run watch:js\"",
     "watch:md": "nodemon --ext md --watch markdown/sections --exec \"python3.11 scripts/readme.py\"",
     "watch:scss": "sass --watch --style=compressed src/scss:static/css",
     "minify:css": "cleancss -b --batch-suffix '.min' -o static/css -O2 src/css/*.css",
-    "minify:scss": "sass --style=compressed src/scss:static/css"
+    "minify:scss": "sass --style=compressed src/scss:static/css",
+    "watch:js": "nodemon --ext js --watch src/js --exec \"npm run uglify:js\"",
+    "uglify:js": "uglifyjs --compress --mangle --source-map --output static/js/main.min.js src/js/main.js"
   },
   "keywords": [],
   "author": "seyLu (https://github.com/seyLu)",
@@ -21,6 +23,7 @@
     "make-dir-cli": "^3.1.0",
     "nodemon": "^3.0.1",
     "rimraf": "^5.0.1",
-    "sass": "^1.66.1"
+    "sass": "^1.66.1",
+    "uglify-js": "^3.17.4"
   }
 }

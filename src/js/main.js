@@ -1,15 +1,15 @@
 const themeToggler = document.getElementById("theme-toggler");
 const bodyDataset = document.body.dataset;
 
-const githubMarkdownCSS = document.getElementById("github-markdown-css");
-const pathToCSS = "/static/css"
+const ghmdCss = document.getElementById("github-markdown-css");
+const ghmdCssCdn = "https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown"
 
 themeToggler.addEventListener("change", () => {
    if (bodyDataset.theme === "light") {
       bodyDataset.theme = "dark";
-      githubMarkdownCSS.href = `${pathToCSS}/github-markdown-dark.min.css`;
+      ghmdCss.href = `${ghmdCssCdn}-dark.min.css`;
    } else {
       bodyDataset.theme = "light";
-      githubMarkdownCSS.href = `${pathToCSS}/github-markdown-light.min.css`;
+      ghmdCss.href = `${ghmdCssCdn}-light.min.css`;
    }
 })
