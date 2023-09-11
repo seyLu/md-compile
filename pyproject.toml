@@ -42,4 +42,4 @@ exclude = [
 
 
 [tool.djlint]
-indent_size=2
+indent=4
