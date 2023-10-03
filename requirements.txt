@@ -22,4 +22,4 @@ regex==2023.8.8
 six==1.16.0
 tqdm==4.66.1
 typing_extensions==4.8.0
-Werkzeug==2.3.7
+Werkzeug==3.0.0
