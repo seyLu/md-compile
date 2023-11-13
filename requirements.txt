@@ -1,7 +1,7 @@
 blinker==1.7.0
 click==8.1.7
 colorama==0.4.6
-cssbeautifier==1.14.9
+cssbeautifier==1.14.11
 djlint==1.34.0
 EditorConfig==0.12.3
 Flask==3.0.0
