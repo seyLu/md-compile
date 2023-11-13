@@ -9,7 +9,7 @@ html-tag-names==0.1.2
 html-void-elements==0.1.0
 itsdangerous==2.1.2
 Jinja2==3.1.2
-jsbeautifier==1.14.9
+jsbeautifier==1.14.11
 json5==0.9.14
 Markdown==3.5.1
 MarkupSafe==2.1.3
